@@ -29,7 +29,8 @@ class MidiWriter:
         duration = note.duration_tick
         if duration == 0:
             duration = 1
-        self.__midi_file.addNote(self.__track, self.__channel, note.pitch_id,
+        for pitch in note.pitch_id:
+            self.__midi_file.addNote(self.__track, self.__channel, pitch,
                                  note.start_time_tick, duration, note.volume)
 
     def close(self):

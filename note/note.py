@@ -8,6 +8,10 @@ class Note:
         :param volume: initial volume of the note
         """
         self.__bpm = bpm
+
+        if not isinstance(pitch_id, list):
+            pitch_id = [pitch_id]
+
         self.__pitch_id = pitch_id
         self.__is_playing = False
         self.__volume = volume

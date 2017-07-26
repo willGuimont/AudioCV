@@ -15,14 +15,15 @@ last_time = time.time()
 while video_capture.isOpened():
 
     ret, frame = video_capture.read()
+    frame = cv2.flip(frame, 1)
 
     if not ret:
         break
 
     if piano is None:
         height, width, channels = frame.shape
-        third = int(width / 3)
-        regions = [Region((0, 0), (third, height)), Region((2 * third, 0), (width, height))]
+        quarter = int(width / 4)
+        regions = [Region((0, 0), (quarter, height)), Region((3 * quarter, 0), (width, height))]
         notes = [Note(NoteDefines.C4), Note(NoteDefines.E4)]
         piano = Piano(regions, notes, use_audio=True, filepath="midi/test_01.mid")
 

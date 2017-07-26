@@ -15,10 +15,12 @@ class MidiPlayer():
         midi.init()
 
     def play(self, note_id, velocity=127):
-        self.__player.note_on(note_id, velocity)
+        for n in note_id:
+            self.__player.note_on(n, velocity)
 
     def stop(self, note_id, velocity=127):
-        self.__player.note_off(note_id, velocity)
+        for n in note_id:
+            self.__player.note_off(n, velocity)
 
     def close(self):
         self.__player.close()

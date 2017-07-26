@@ -40,10 +40,10 @@ class Detector:
         cv2.setTrackbarPos(Detector.__min_h_slider_name, Detector.__slider_window_name, 95)
         cv2.setTrackbarPos(Detector.__max_h_slider_name, Detector.__slider_window_name, 139)
 
-        cv2.setTrackbarPos(Detector.__min_s_slider_name, Detector.__slider_window_name, 14)
+        cv2.setTrackbarPos(Detector.__min_s_slider_name, Detector.__slider_window_name, 39)
         cv2.setTrackbarPos(Detector.__max_s_slider_name, Detector.__slider_window_name, 256)
 
-        cv2.setTrackbarPos(Detector.__min_v_slider_name, Detector.__slider_window_name, 135)
+        cv2.setTrackbarPos(Detector.__min_v_slider_name, Detector.__slider_window_name, 89)
         cv2.setTrackbarPos(Detector.__max_v_slider_name, Detector.__slider_window_name, 256)
 
     # Empty callback for the sliders

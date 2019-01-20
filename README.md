@@ -1,2 +1,2 @@
 # AudioCV
-Play piano with colored stuff
+Play piano with colored stuff via your webcam
